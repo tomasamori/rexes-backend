@@ -14,6 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "mysql2": "^3.12.0",
     "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.5",
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/node": "^22.12.0",
     "@types/validator": "^13.12.2"
   },
