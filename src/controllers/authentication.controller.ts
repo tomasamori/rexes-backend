@@ -42,7 +42,7 @@ export const signIn = async (req: Request, res: Response) => {
       expiresIn: "1h",
     });
 
-    res.status(200).json({ token });
+    res.status(200).json({ token: token, role: user.role });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "An error occurred while signing in." });
