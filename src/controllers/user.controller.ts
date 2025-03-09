@@ -6,9 +6,7 @@ import { userRepository } from "../repositories/user.repository";
 
 export const getAllUsers = async (req: Request, res: Response) => {
   try {
-    const users = await userRepository.findAll({
-      attributes: { exclude: ["password"] },
-    });
+    const users = await userRepository.findAll();
     res.status(200).json(users);
   } catch (error) {
     console.error(error);
@@ -29,7 +27,6 @@ export const getUserById = async (req: Request, res: Response) => {
 
     const user = await userRepository.findOne({
       where: { id },
-      attributes: { exclude: ["password"] },
     });
 
     if (!user) {
